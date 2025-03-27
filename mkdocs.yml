@@ -1,0 +1,19 @@
+site_name: Alexander Haken Portfolio
+site_author: Alexander Haken
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+nav:
+  - Home: index.md
+  - Quadcopter Project: projects.md
+  - Hydrofoil Robot: hydrofoil.md
