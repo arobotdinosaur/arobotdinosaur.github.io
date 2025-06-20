@@ -32,4 +32,4 @@ plugins:
     
 nav:
   - Home: index.md
-  - Quadcopter Project: quadcopter/README.md
+  - Quadcopter Project: quadcopter/README.md 
