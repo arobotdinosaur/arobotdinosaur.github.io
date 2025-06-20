@@ -1,5 +1,6 @@
 site_name: Alexander Haken Portfolio
 site_author: Alexander Haken
+
 theme:
   name: material
   palette:
@@ -22,14 +23,17 @@ theme:
     - content.code.copy
     - content.action.edit
     - content.action.view
+
 plugins:
   - search
   - multirepo:
       nav_repos:
         - name: quadcopter
-          import_url: https://github.com/arobotdinosaur/FA24-CSE-176E-276E-Quadcopter-Design-and-Development 
-          imports: [ /README.md, /Misc/* ]
-    
+          import_url: https://github.com/arobotdinosaur/FA24-CSE-176E-276E-Quadcopter-Design-and-Development
+          imports:
+            - /README.md
+            - /Misc/*
+
 nav:
   - Home: index.md
-  - Quadcopter Project: quadcopter/README.md 
+  - Quadcopter Project: quadcopter/README.md
