@@ -1,2 +1,2 @@
 # Alexander Haken Project Portfolio
-I'm a senior at UC San Diego studying mechanical engineering, and this is my portfolio website.
+I'm a recent graduate UC San Diego who majored in mechanical engineering, and this is my portfolio website.
