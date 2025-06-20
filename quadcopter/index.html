@@ -1,0 +1,708 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Alexander Haken">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Quadcopter Project - Alexander Haken Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Alexander Haken Portfolio" class="md-header__button md-logo" aria-label="Alexander Haken Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Alexander Haken Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quadcopter Project
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Quadcopter Project
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Alexander Haken Portfolio" class="md-nav__button md-logo" aria-label="Alexander Haken Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Alexander Haken Portfolio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Quadcopter Project
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quadcopter Project
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#electronic-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electronic Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadcopter-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quadcopter Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quadcopter Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microcontroller-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microcontroller connections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bootloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bootloader
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imu" class="md-nav__link">
+    <span class="md-ellipsis">
+      IMU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugrescue-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug/Rescue Header
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor-driver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motor Driver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netbridge-and-power-supply" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netbridge and Power Supply
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcb-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCB Design
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-filtering-and-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor Filtering and Calibration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pid-control-and-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      PID Control and Tuning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcb-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCB Assembly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flight" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flight
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acknowledgements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/arobotdinosaur/FA24-CSE-176E-276E-Quadcopter-Design-and-Development.git/edit/main/README.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/arobotdinosaur/FA24-CSE-176E-276E-Quadcopter-Design-and-Development.git/raw/main/README.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+  <h1>Quadcopter Project</h1>
+
+<p><img alt="Raw Quadcopters" src="https://github.com/KaustubhKanagalekar/FA24-CSE-176E-276E-Quadcopter-Design-and-Development/blob/main/Misc/IMG_1573.HEIC" />
+Quadcopters designed by Kaustubh Kanagalekar and Alexander Haken</p>
+<h2 id="introduction">Introduction</h2>
+<p>In this project class, we were challenged to design a printed circuit board (PCB) quadcopter and program it using Arduino software in order to achieve flight. </p>
+<p>The class was broken into multiple smaller milestones- PCB design for electronic components, PCB design for quadcopter, sensor filtering and calibration, Proportional, Integral, Derivative (PID) tuning, PCB quadcopter assembly, and flight. As we were designing the PCB quadcopter using computer software, we were provided with a test flight control board (FCB) that we could work on concurrently. We could use either the FCB or the custom PCB quadcopter for demonstration purposes. </p>
+<p>The skills that we learned from the class were-
+1. PCB design and fabrication
+2. Embedded systems programming 
+3. Control theory and sensor calibration </p>
+<h2 id="electronic-design">Electronic Design</h2>
+<p>Using Fusion 360, we were tasked with designing the following components from scratch- </p>
+<ol>
+<li>Resistor (0805 0Ohm) </li>
+<li>Red LED </li>
+<li>MOSFET (N-channel) </li>
+<li>Inertial measurement unit (IMU) (LSM6DSOXTR 6-Axis) </li>
+</ol>
+<p>We referenced the data sheets for each component online and extensively studied the footprints. 
+More specifically, we utilised the footprints tab in Fusion 360 to add SMD pads, silkscreens, keepouts, etc. to accurately replicate the dimensions. </p>
+<p>We also took advantage of the automated building tool at times to accurately build the electronic components.  </p>
+<p>Footprint of the resistor
+<img alt="Footprint of the resistor" src="https://github.com/KaustubhKanagalekar/FA24-CSE-176E-276E-Quadcopter-Design-and-Development/blob/main/Misc/Screenshot%202024-12-17%20at%2015.55.44.png" /> </p>
+<p>Footprint of the LED 
+<img alt="Footprint of the LED" src="https://github.com/KaustubhKanagalekar/FA24-CSE-176E-276E-Quadcopter-Design-and-Development/blob/main/Misc/Screenshot%202024-12-17%20at%2015.57.06.png" /></p>
+<p>Footprint of the MOSFET 
+<img alt="MOSFET Footprint" src="https://github.com/KaustubhKanagalekar/FA24-CSE-176E-276E-Quadcopter-Design-and-Development/blob/main/Misc/Screenshot%202024-12-17%20at%2015.58.18.png" /> </p>
+<p>Footprint of the IMU 
+<img alt="IMU Footprint" src="https://github.com/KaustubhKanagalekar/FA24-CSE-176E-276E-Quadcopter-Design-and-Development/blob/main/Misc/Screenshot%202024-12-17%20at%2015.57.47.png" /></p>
+<p>After creating the footprints, we built symbols for each electronic component using the standard IEEE styling conventions using the symbols tab. </p>
+<p>Finally, we connected the footprints and the symbols of each component in the components tab so that we could use them in our quadcopter schematic and design. </p>
+<p>We ensured that we met all the necessary guidelines and requirements set forth by the PCB manufacturer and instructor in our designs.  </p>
+<h2 id="quadcopter-design">Quadcopter Design</h2>
+<p>We were tasked with creating the schematic for the PCB quadcopter. In addition to our custom made components, we were also provided with additional parts from the instructor. 
+The quadcopter had multiple smaller sketches- 
+1. The microcontroller connections<br />
+2. Bootloader 
+3. IMU 
+4. Debug/Rescue Header 
+5. Motor Driver 
+6. Netbridge and power supply </p>
+<h3 id="microcontroller-connections">Microcontroller connections</h3>
+<p>We connected various pins and components to the microcontroller. The most significant connection we had was the balun (used for allowing balanced and unbalanced lines to be interfaced without major disturbances in impedances). This was significant as it allowed us to securely connect the antenna in our design. We were deliberate in our antenna placement as incorrect placements would yield spotty data transmission, and the quadcopter may not be able to fly.  </p>
+<h3 id="bootloader">Bootloader</h3>
+<p>The primary objective of including the bootloader was  to load code to the microcontroller. Pins were connected to the microcontroller from the bootloader. </p>
+<h3 id="imu">IMU</h3>
+<p>We established a communication protocol with the microcontroller using I2C (Inter-Integrated Circuit). We incorporated two wires (Serial Data Line and Serial Clock Line) to transmit data between the microcontroller and IMU. </p>
+<h3 id="debugrescue-header">Debug/Rescue Header</h3>
+<p>The rescue header was incorporated in order to help with debugging signals during testing. We also added a IMU reuse header in case our soldered IMU had issues. </p>
+<h3 id="motor-driver">Motor Driver</h3>
+<p>We built four copies of the motor driver sketch as there were four motors driving the quadcopter. We included motor pads, mosfets, and a diode in the sketch. More importantly, we also included a decoupling capacitor to help absorb switching noise from the motors.</p>
+<h3 id="netbridge-and-power-supply">Netbridge and Power Supply</h3>
+<p>We designed a low-dropout voltage regulator in the schematic to provide a stable power output of 3V to the motors. This was because the batteries were providing power ranging from 4V to 5V. We had two power rails: An unregulated power rail (called VBAT) that provides power to the motors and input of the voltage regulator and is driven directly by the battery, and a regulated supply driven by the voltage regulator (called 3V) </p>
+<p>A netbridge was also created in order to electrically connect two nets in a schematic while keeping the nets separate in schematic . This was done to connect digital ground (BAT_GND) to regular ground. </p>
+<p>Image of the overall schematic 
+<img alt="Schematic" src="https://github.com/KaustubhKanagalekar/FA24-CSE-176E-276E-Quadcopter-Design-and-Development/blob/main/Misc/Screenshot%202024-12-17%20at%2022.47.36.png" /></p>
+<h3 id="pcb-design">PCB Design</h3>
+<p>We created a custom shape for the quadcopter and placed all the necessary components from the sketch to the board. The placement of some components were extremely important- for example, the antenna had to be placed near the edge of the board for uninterrupted communication, and the IMU had to be placed at the centre for accurate measurements. The crystal was placed close to the microcontroller, and the motor controllers were placed at the edges of the board. </p>
+<p>We primarily used the autorouter to route all wirings and connections, except in the case of the antenna and parts of the microcontroller. The antenna had to be connected with a large wire (50 mm) manually to the balun and other components (such as the corresponding  microcontroller pins and capacitors). The crystal also had to manually routed with specific pins of the microcontroller. We utilized differential pairs for sending the signals from the antenna and crystal back to the microcontroller due to the sensitivity of these components.</p>
+<p>The board had to fit under a 13.9 cm square requirement  with motor holes of 12.2 mm for optimal placement. 
+In Fusion 360, the board was aligned to a 1 mm grid for aesthetic reasons. </p>
+<p>We had four layers on the board in order to manage all the wirings and connections succinctly. We had a top layer, bottom layer, and two internal layers (one for 3V/VBAT and the other for GND/BAT_GND). The top and bottom layers involved signal routing for connecting various electronic components. The bottom plan was used whenever possible to reduce electrical noise. The 3V/VBAT and GND/BAT_GND layers were exclusively used for delivering power and ground signals, respectively. The traces that carried both power and ground signals were as short as possible to provide a low-resistance path for current to flow. 
+We took care to leave a gap in all the layers beneath the IMU as the manufacture specified that we should not have metal underneath it for best performance.</p>
+<p>Image of the connected boards in Fusion 360.
+<img alt="Board 1" src="https://github.com/KaustubhKanagalekar/FA24-CSE-176E-276E-Quadcopter-Design-and-Development/blob/main/Misc/Screenshot%202024-12-18%20at%2015.51.15.png" />
+<img alt="Board 2" src="https://github.com/KaustubhKanagalekar/FA24-CSE-176E-276E-Quadcopter-Design-and-Development/blob/main/Misc/Screenshot%202024-12-18%20at%2016.17.27.png" /></p>
+<h2 id="sensor-filtering-and-calibration">Sensor Filtering and Calibration</h2>
+<p>Prior to reading data from the IMU, we had to establish a connection between a test remote and the FCB; we accomplished this using a check-sum that would transmit data sent from the remote (such as throttle value, pitch, roll, yaw) to the FCB. In addition, we also wrote code that read the existing gimbal value from the remote and transmitted it to the FCB to achieve flight. 
+The check-sum was created in order to prevent bad data packets from getting sent over and to only accept packets that were sent from our remote (and not from other groups). </p>
+<p>On the FCB, we had to read data from the IMU to accurately measure the orientation. We used an existing library corresponding to the IMU called Adafruit_AHRS- from this, we used the <code>Adafruit_Simple_AHRS::getQuadOrientation()</code> function to gather all the necessary data.
+We obtained the pitch rate, roll, and yaw from the quad orientation function.<br />
+After gathering these data from the IMU, we created a complementary filter to filter out some of the noise created by the accelerometer and gyroscope. The accelerometer (Euler angles of the orientation) and gyroscope readings (the angular accelerations) were taken from the IMU. 
+The reason we created a complementary filter was to gather the best possible data from both the gyroscope and the accelerometer as each inertial sensor has positives and drawbacks. The accelerometers do not drift over time, but they are quite noisy when the motors are running, and slightly less responsive compared to the gyroscope. Whereas, gyroscopes are less noisy than  the accelerometers, but the resulting measurement will drift over time due to accumulated error. We tried to set a high gain such that we could extract more data from the gyroscope in our code. 
+We used a standard formula shown below with a gain of 0.98- <code>cf_angle = (gain) * (cf_angle + (gyro_raw * RAD_TO_DEG * dt)) + (1-gain) * (acc_angle)</code></p>
+<p><code>RAD_TO_DEG = 57.295779513082320876798154814105</code>
+<code>cf_angle</code> is the angle resulted from the complementary  filter, <code>gyro_raw</code> is the gyroscope measurement, <code>acc_angle</code> is the Euler angles, <code>dt</code> is the change in time from the measurements.  </p>
+<p>We also accounted for any offsets caused by the IMU in the code to have it read zero when levelled. 
+We only performed complementary filtering on the roll and pitch axes. </p>
+<h2 id="pid-control-and-tuning">PID Control and Tuning</h2>
+<p>PID is a type of controller used in feedback systems to regulate speed, position, and various other parameters to ensure stability. We used PID to keep the FCB stable and levelled when the motors were running. 
+Proportional (P) responds to the current error and provides immediate action 
+Integral (I) accumulates past errors 
+Derivative (D) predicts future errors based on the rate of change. 
+This was implemented for the pitch and roll axes using the following equation- 
+<code>PID = (Kp* error) + Ki* integral - Kd* derivative</code> 
+Where <code>Kp, Ki, Kd</code> are constants that are determined by testing, <code>error</code> is the difference from the remote gimbal input and the offset of the axis (<code>error = setpoint - corrected</code>), <code>integral</code> is <code>integral = error* dt+integral</code> , and derivative is the raw gyro readings in degrees. We used the raw gyro readings rather than doing a numerical derivative of cf_pitch because the raw gyroscope readings had slightly less delay. </p>
+<p>PID for yaw rate was implemented a bit differently. The control was only proportional to on the velocity error in yaw, which we got directly from the raw gyroscope yaw data.</p>
+<p>After writing the code for all three axes control, we combined them so that there would be an equal output to the motors. We implemented a mixing function which increased the power for the front motors and decreased the power for the rear motors based on the PID output.</p>
+<p>Through trial and error, we were able to find the optimal <code>Kp, Ki, Kd</code> values for the various axes to achieve stability. For pitch and roll: a ‘P’ overshoot would have resulted in the FCB “sway” from one end to another, an ‘I’ overshoot would have resulted in levelling at an odd angle, and a ‘D’ overshoot would have resulted in the FCB oscillating rapidly. Undershoots of each would have resulted in the quad not being able to move at all. For yaw rate, overshoots of ‘P’ and ‘D’ resulted in the FCB spinning uncontrollably in space, whereas undershoots would have not caused any motion. </p>
+<p>One critical factor for having reliable PID control was having a fast control loop running on the microcontroller. We initially had issues with "derivative kick" where the derivative term was causing unstable behavior due to a high control latency. To optimize speed, we made sure that only critical processes were running. Once we commented out all the print statements that we'd been using for debugging, the loop time reduced from about 35 ms to only 8 ms, and our PID controller ran much better.</p>
+<p>For determining the yaw rate coefficients, our control was proportional to the yaw rate error (thus we did not have a <code>Kd</code> value after testing).  </p>
+<p>This is a video of the PID demonstration for the pitch axis
+<img alt="PID Demo video" src="https://github.com/KaustubhKanagalekar/FA24-CSE-176E-276E-Quadcopter-Design-and-Development/blob/main/Misc/IMG_5397.mov" /></p>
+<h2 id="pcb-assembly">PCB Assembly</h2>
+<p>After our PCB quadcopter boards were manufactured, we started on the assembly portion of the board. We applied solder paste to our boards using a stencil (a thin aluminium sheet with precise holes corresponding to the board). Immediately after, we attached all the necessary electronic components by hand, ensuring accuracy and precision. We later used a reflow oven to connect the components and the PCB pads as a reflow oven guarantees a secure connections between the paste applied to the PCB pads and the attached components. </p>
+<p>Picture of assembly after reflow (note that some components were missing due to unavailability at the time of assembly) 
+<img alt="Incomplete Assembly" src="https://github.com/KaustubhKanagalekar/FA24-CSE-176E-276E-Quadcopter-Design-and-Development/blob/main/Misc/IMG_5480.jpg" /></p>
+<h2 id="flight">Flight</h2>
+<p>We demonstrated flight using the provided FCB. </p>
+<p>Flight was broken into the following categories- 
+1. "Roombaing" -- moving around the the floor with dowels installed with direction control and minimal yaw
+2. Repeated, vertical hopping (&gt;1 inches, &gt; 0.25 second)
+3. Repeated, vertical hopping (&gt;6 inches, &gt; 1 second)
+4. Repeated, vertical hopping (&gt;12 inches, &gt; 3 seconds)
+5. Short flight (&gt;12 inches, &gt; 6 seconds)
+6. Sustained flight (&gt; 12 inches, &gt; 10 seconds, demonstrate yaw control)
+7.  Sustained flight (Fly long enough to consume an entire battery)</p>
+<p>In this phase, we had also implemented a “trimming” mechanism where we would manually offset any discrepancies in pitch and roll to ensure a level flight takeoff. We would test which direction the FCB would travel towards when throttle was applied and would adjust any errors according. Trimming would have to be done every time we flew from a different location as ground would be levelled differently at each location. </p>
+<p>In our final demonstration, we were able to achieve FL 5. </p>
+<p>Please download the video after clicking the "?" icon to view the flight
+<img alt="Flight video" src="https://github.com/KaustubhKanagalekar/FA24-CSE-176E-276E-Quadcopter-Design-and-Development/blob/main/Misc/IMG_5474.mov" /></p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>We would like to thank our instructor, Dr. Steven Swanson, our TA, Zifeng Zhang, and our classmates for their assistance and guidance with the project.<br />
+Here is the <a href="https://github.com/NVSL/QuadClass-Resources">link</a> to the main quadcopter class repository.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "toc.integrate", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
