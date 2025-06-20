@@ -24,5 +24,3 @@ theme:
     - content.action.view
 nav:
   - Home: index.md
-  - Quadcopter Project: projects.md
-  - Hydrofoil Robot: hydrofoil.md
