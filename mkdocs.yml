@@ -32,4 +32,5 @@ plugins:
     
 nav:
   - Home: index.md
-  - Quadcopter Project: quadcopter
+  - Quadcopter Project: quadcopter/README.md
+  - Hydrofoil Robot: hydrofoil.md
